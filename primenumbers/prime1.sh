@@ -1,4 +1,5 @@
 # to print prime numbers  in a range
+
 if [ $# -gt 2 -o $# -lt 2 -a $# -gt 0 ]
 then
 echo "Syntax Error \nSyntax --> $0 [starting limit] [ending limit]"
