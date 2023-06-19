@@ -1,0 +1,43 @@
+program
+*******
+
+
+#shell script to rename all ordinary files in a directory with filename.pid of shell
+
+if [ $# -ne 0 ]
+then
+echo "Syntax is <$0>"
+exit 1
+fi
+for i in * 
+do
+if [ -f $i ]
+then
+mv $i $i.$$ $newname
+fi
+done
+exit 
+
+
+____________________________________________________________________________________________________________________________________________
+
+output
+******
+
+ksb@ksb-OptiPlex-3060:~/hibabincy/linx$ sh ordinary.sh
+ksb@ksb-OptiPlex-3060:~/hibabincy/linx$ ls -l
+total 40
+drwxrwxr-x 2 ksb ksb 4096 Mar 30 12:11 commnds
+drwxrwxr-x 8 ksb ksb 4096 Mar 27 14:31 h1
+drwxrwxr-x 2 ksb ksb 4096 Jun  5 15:44 leapyear
+drwxrwxr-x 2 ksb ksb 4096 Mar 30 12:11 notes
+drwxrwxr-x 2 ksb ksb 4096 Apr 24 15:49 NSA-programs
+-rw-rw-r-- 1 ksb ksb  207 Jun 19 10:53 ordinary.sh.17433
+-rw-rw-r-- 1 ksb ksb    0 Jun 12 15:39 prime1.sh.17433
+drwxrwxr-x 2 ksb ksb 4096 Jun 12 15:40 primenumbers
+-rw-rw-r-- 1 ksb ksb 1633 Jun 19 10:41 shellqstns.17433
+drwxrwxr-x 2 ksb ksb 4096 Jun  5 15:44 triangle
+drwxrwxr-x 2 ksb ksb 4096 Jun  5 15:44 wish
+ksb@ksb-OptiPlex-3060:~/hibabincy/linx$ 
+
+
