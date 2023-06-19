@@ -24,7 +24,7 @@ echo "Prime numbers between $a-$b are:"
 for x in $(seq $a $b)
 do
 k=0
-for i in $(seq 2 $(expr $x - 1))
+for i in $(seq 2 $(expr $x / 2 ))
 do
 if [ $(expr $x % $i) -eq 0 ]
 then
